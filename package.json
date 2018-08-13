@@ -1,0 +1,24 @@
+{
+  "name": "pki-express",
+  "version": "1.0.0",
+  "description": "Classes to consume PKI Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "python",
+    "pki",
+    "express",
+    "certificate",
+    "digital",
+    "signature",
+    "x509"
+  ],
+  "author": "Ismael Medeiros by Lacuna Software",
+  "dependencies": {
+    "tmp": "^0.0.33"
+  },
+  "repository": "https://github.com/LacunaSoftware/PkiExpressNode",
+  "license": "MIT"
+}
