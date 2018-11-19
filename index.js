@@ -16,6 +16,11 @@ const {
 	SHA512DigestAlgorithm
 } = require('./lib/digest-algorithm');
 const { DigestAlgorithmAndValue } = require('./lib/digest-algorithm-and-value');
+const { KeyFormats } = require('./lib/enums');
+const {
+	KeyGenerator,
+	KeyGenerationResult
+} = require('./lib/key-generator');
 const { Oids } = require('./lib/oids');
 const { PadesHorizontalAlign } = require('./lib/pades-horizontal-align');
 const { PadesMeasurementUnits } = require('./lib/pades-measurement-units');
@@ -65,6 +70,10 @@ const {
 	PkiItalyCertificateFields,
 	Name
 } = require('./lib/pk-certificate');
+const {
+	Pkcs12Generator,
+	Pkcs12GenerationResult
+} = require('./lib/pkcs12-generator');
 const { PkiExpressConfig } = require('./lib/pkiexpress-config');
 const { PkiExpressOperator } = require('./lib/pkiexpress-operador');
 const { ResourceContentOrReference } = require('./lib/resource-content-or-reference');
@@ -95,6 +104,9 @@ exports.SHA256DigestAlgorithm = SHA256DigestAlgorithm;
 exports.SHA384DigestAlgorithm = SHA384DigestAlgorithm;
 exports.SHA512DigestAlgorithm = SHA512DigestAlgorithm;
 exports.DigestAlgorithmAndValue = DigestAlgorithmAndValue;
+exports.KeyFormats = KeyFormats;
+exports.KeyGenerator = KeyGenerator;
+exports.KeyGenerationResult = KeyGenerationResult;
 exports.Oids = Oids;
 exports.PadesHorizontalAlign = PadesHorizontalAlign;
 exports.PadesMeasurementUnits = PadesMeasurementUnits;
@@ -137,6 +149,8 @@ exports.PKCertificate = PKCertificate;
 exports.PkiBrazilCertificateFields = PkiBrazilCertificateFields;
 exports.PkiItalyCertificateFields = PkiItalyCertificateFields;
 exports.Name = Name;
+exports.Pkcs12Generator = Pkcs12Generator;
+exports.Pkcs12GenerationResult = Pkcs12GenerationResult;
 exports.PadesSigner = PadesSigner;
 exports.PkiExpressConfig = PkiExpressConfig;
 exports.PkiExpressOperator = PkiExpressOperator;
