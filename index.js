@@ -70,6 +70,7 @@ const {
 	PkiItalyCertificateFields,
 	Name
 } = require('./lib/pk-certificate');
+const { Pkcs12Certificate } = require('./lib/pkcs12-certificate');
 const {
 	Pkcs12Generator,
 	Pkcs12GenerationResult
@@ -146,6 +147,7 @@ exports.RSASignatureAlgorithm = RSASignatureAlgorithm;
 exports.RSAPKAlgorithm = RSAPKAlgorithm;
 exports.PKAlgorithm = PKAlgorithm;
 exports.PKCertificate = PKCertificate;
+exports.Pkcs12Certificate = Pkcs12Certificate;
 exports.PkiBrazilCertificateFields = PkiBrazilCertificateFields;
 exports.PkiItalyCertificateFields = PkiItalyCertificateFields;
 exports.Name = Name;
