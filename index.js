@@ -16,6 +16,7 @@ const {
 	SHA512DigestAlgorithm
 } = require('./lib/digest-algorithm');
 const { DigestAlgorithmAndValue } = require('./lib/digest-algorithm-and-value');
+const { ErrorCodes } = require('./lib/error-codes');
 const { KeyFormats } = require('./lib/enums');
 const { InstallationNotFoundError } = require('./lib/installation-not-found-error');
 const {
@@ -88,6 +89,7 @@ const { Signer } = require('./lib/signer');
 const { StandardSignaturePolicies } = require('./lib/standard-signature-policies');
 const { TimestampAuthority } = require('./lib/timestamp-authority');
 const { TimestampAuthorityAuthType } = require('./lib/timestamp-authority-auth-type');
+const { ValidationError } = require('./lib/validation-error');
 const {
 	ValidationResults,
 	ValidationItem
@@ -106,6 +108,7 @@ exports.SHA256DigestAlgorithm = SHA256DigestAlgorithm;
 exports.SHA384DigestAlgorithm = SHA384DigestAlgorithm;
 exports.SHA512DigestAlgorithm = SHA512DigestAlgorithm;
 exports.DigestAlgorithmAndValue = DigestAlgorithmAndValue;
+exports.ErrorCodes = ErrorCodes;
 exports.KeyFormats = KeyFormats;
 exports.InstallationNotFoundError = InstallationNotFoundError;
 exports.KeyGenerator = KeyGenerator;
@@ -168,5 +171,6 @@ exports.Signer = Signer;
 exports.StandardSignaturePolicies = StandardSignaturePolicies;
 exports.TimestampAuthority = TimestampAuthority;
 exports.TimestampAuthorityAuthType = TimestampAuthorityAuthType;
+exports.ValidationError = ValidationError;
 exports.ValidationResults = ValidationResults;
 exports.ValidationItem = ValidationItem;
