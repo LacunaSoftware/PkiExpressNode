@@ -46,6 +46,7 @@ const {
 	HeightDefinedVarWidth,
 	VarWidthAndHeight
 } = require('./lib/pdf-container-definition');
+const { PadesTimestamper } = require('./lib/pades-timestamper')
 const { PdfHelper } = require('./lib/pdf-helper');
 const { PdfMark } = require('./lib/pdf-mark');
 const { PdfMarkElement } = require('./lib/pdf-mark-element');
@@ -133,6 +134,7 @@ exports.WidthDefinedVarHeight = WidthDefinedVarHeight;
 exports.HeightDefinedFixedWidth = HeightDefinedFixedWidth;
 exports.HeightDefinedVarWidth = HeightDefinedVarWidth;
 exports.VarWidthAndHeight = VarWidthAndHeight;
+exports.PadesTimestamper = PadesTimestamper;
 exports.PdfHelper = PdfHelper;
 exports.PdfMark = PdfMark;
 exports.PdfMarkElement = PdfMarkElement;
