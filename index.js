@@ -8,7 +8,7 @@ const {
 const { CadesSignatureEditor } = require('./lib/cades-signature-editor');
 const { CadesSignatureExplorer } = require('./lib/cades-signature-explorer');
 const { CadesSignatureStarter } = require('./lib/cades-signature-starter');
-const { CadessSigner } = require('./lib/cades-signer');
+const { CadesSigner } = require('./lib/cades-signer');
 const { Color } = require('./lib/color');
 const {
 	DigestAlgorithms,
@@ -106,7 +106,7 @@ exports.CadesTimestamp = CadesTimestamp;
 exports.CadesSignatureEditor = CadesSignatureEditor;
 exports.CadesSignatureExplorer = CadesSignatureExplorer;
 exports.CadesSignatureStarter = CadesSignatureStarter;
-exports.CadessSigner = CadessSigner;
+exports.CadesSigner = CadesSigner;
 exports.CadesSignerInfo = CadesSignerInfo;
 exports.Color = Color;
 exports.DigestAlgorithms = DigestAlgorithms;
