@@ -5,6 +5,10 @@ const {
 	CadesTimestamp,
 	CadesSignerInfo
 } = require('./lib/cades-signature');
+const { CadesSignatureEditor } = require('./lib/cades-signature-editor');
+const { CadesSignatureExplorer } = require('./lib/cades-signature-explorer');
+const { CadesSignatureStarter } = require('./lib/cades-signature-starter');
+const { CadesSigner } = require('./lib/cades-signer');
 const { Color } = require('./lib/color');
 const {
 	DigestAlgorithms,
@@ -46,7 +50,7 @@ const {
 	HeightDefinedVarWidth,
 	VarWidthAndHeight
 } = require('./lib/pdf-container-definition');
-const { PadesTimestamper } = require('./lib/pades-timestamper')
+const { PadesTimestamper } = require('./lib/pades-timestamper');
 const { PdfHelper } = require('./lib/pdf-helper');
 const { PdfMark } = require('./lib/pdf-mark');
 const { PdfMarkElement } = require('./lib/pdf-mark-element');
@@ -99,6 +103,10 @@ const {
 exports.BaseSigner = BaseSigner;
 exports.CadesSignature = CadesSignature;
 exports.CadesTimestamp = CadesTimestamp;
+exports.CadesSignatureEditor = CadesSignatureEditor;
+exports.CadesSignatureExplorer = CadesSignatureExplorer;
+exports.CadesSignatureStarter = CadesSignatureStarter;
+exports.CadesSigner = CadesSigner;
 exports.CadesSignerInfo = CadesSignerInfo;
 exports.Color = Color;
 exports.DigestAlgorithms = DigestAlgorithms;
