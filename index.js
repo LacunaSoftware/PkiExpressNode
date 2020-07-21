@@ -21,7 +21,10 @@ const {
 } = require('./lib/digest-algorithm');
 const { DigestAlgorithmAndValue } = require('./lib/digest-algorithm-and-value');
 const { ErrorCodes } = require('./lib/error-codes');
-const { KeyFormats } = require('./lib/enums');
+const { 
+	KeyFormats,
+	PadesCertificationLevels
+} = require('./lib/enums');
 const { InstallationNotFoundError } = require('./lib/installation-not-found-error');
 const {
 	KeyGenerator,
@@ -119,6 +122,7 @@ exports.SHA512DigestAlgorithm = SHA512DigestAlgorithm;
 exports.DigestAlgorithmAndValue = DigestAlgorithmAndValue;
 exports.ErrorCodes = ErrorCodes;
 exports.KeyFormats = KeyFormats;
+exports.PadesCertificationLevels = PadesCertificationLevels;
 exports.InstallationNotFoundError = InstallationNotFoundError;
 exports.KeyGenerator = KeyGenerator;
 exports.KeyGenerationResult = KeyGenerationResult;
