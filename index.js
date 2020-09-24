@@ -9,6 +9,7 @@ const { CadesSignatureEditor } = require('./lib/cades-signature-editor');
 const { CadesSignatureExplorer } = require('./lib/cades-signature-explorer');
 const { CadesSignatureStarter } = require('./lib/cades-signature-starter');
 const { CadesSigner } = require('./lib/cades-signer');
+const { CheckServiceResult } = require('./lib/check-service-result');
 const { Color } = require('./lib/color');
 const {
 	DigestAlgorithms,
@@ -20,6 +21,7 @@ const {
 	SHA512DigestAlgorithm
 } = require('./lib/digest-algorithm');
 const { DigestAlgorithmAndValue } = require('./lib/digest-algorithm-and-value');
+const { DiscoverServicesResult } = require('./lib/discover-services-result');
 const { ErrorCodes } = require('./lib/error-codes');
 const { 
 	KeyFormats,
@@ -97,6 +99,12 @@ const { Signer } = require('./lib/signer');
 const { StandardSignaturePolicies } = require('./lib/standard-signature-policies');
 const { TimestampAuthority } = require('./lib/timestamp-authority');
 const { TimestampAuthorityAuthType } = require('./lib/timestamp-authority-auth-type');
+const { TrustServiceAuthParameters } = require('./lib/trust-service-auth-parameters');
+const { TrustServiceInfo } = require('./lib/trust-service-info');
+const { TrustServiceNameModel } = require('./lib/trust-service-name-model');
+const { TrustServiceSessionResult } = require('./lib/trust-service-session-result');
+const { TrustServiceSessionTypes } = require('./lib/trust-service-session-types');
+const { TrustServicesManager } = require('./lib/trust-services-manager');
 const { ValidationError } = require('./lib/validation-error');
 const {
 	ValidationResults,
@@ -111,6 +119,7 @@ exports.CadesSignatureExplorer = CadesSignatureExplorer;
 exports.CadesSignatureStarter = CadesSignatureStarter;
 exports.CadesSigner = CadesSigner;
 exports.CadesSignerInfo = CadesSignerInfo;
+exports.CheckServiceResult = CheckServiceResult;
 exports.Color = Color;
 exports.DigestAlgorithms = DigestAlgorithms;
 exports.DigestAlgorithm = DigestAlgorithm;
@@ -120,6 +129,7 @@ exports.SHA256DigestAlgorithm = SHA256DigestAlgorithm;
 exports.SHA384DigestAlgorithm = SHA384DigestAlgorithm;
 exports.SHA512DigestAlgorithm = SHA512DigestAlgorithm;
 exports.DigestAlgorithmAndValue = DigestAlgorithmAndValue;
+exports.DiscoverServicesResult = DiscoverServicesResult;
 exports.ErrorCodes = ErrorCodes;
 exports.KeyFormats = KeyFormats;
 exports.PadesCertificationLevels = PadesCertificationLevels;
@@ -185,6 +195,12 @@ exports.Signer = Signer;
 exports.StandardSignaturePolicies = StandardSignaturePolicies;
 exports.TimestampAuthority = TimestampAuthority;
 exports.TimestampAuthorityAuthType = TimestampAuthorityAuthType;
+exports.TrustServiceAuthParameters = TrustServiceAuthParameters;
+exports.TrustServiceInfo = TrustServiceInfo;
+exports.TrustServiceNameModel = TrustServiceNameModel;
+exports.TrustServiceSessionResult = TrustServiceSessionResult;
+exports.TrustServiceSessionTypes = TrustServiceSessionTypes;
+exports.TrustServicesManager = TrustServicesManager;
 exports.ValidationError = ValidationError;
 exports.ValidationResults = ValidationResults;
 exports.ValidationItem = ValidationItem;
