@@ -110,6 +110,8 @@ const {
 	ValidationResults,
 	ValidationItem
 } = require('./lib/validation');
+const { XmlSignatureStarter } = require('./lib/xml-signature-starter');
+const { XmlSigner } = require('./lib/xml-signer');
 
 exports.BaseSigner = BaseSigner;
 exports.CadesSignature = CadesSignature;
@@ -204,3 +206,5 @@ exports.TrustServicesManager = TrustServicesManager;
 exports.ValidationError = ValidationError;
 exports.ValidationResults = ValidationResults;
 exports.ValidationItem = ValidationItem;
+exports.XmlSignatureStarter = XmlSignatureStarter;
+exports.XmlSigner = XmlSigner;
