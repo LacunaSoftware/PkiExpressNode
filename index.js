@@ -1,4 +1,7 @@
 'use strict';
+const { AuthCompleteResult } = require('./lib/auth-complete-result');
+const { AuthStartResult } = require('./lib/auth-start-result');
+const { Authentication } = require('./lib/authentication');
 const { BaseSigner } = require('./lib/base-signer');
 const {
 	CadesSignature,
@@ -113,6 +116,9 @@ const {
 const { XmlSignatureStarter } = require('./lib/xml-signature-starter');
 const { XmlSigner } = require('./lib/xml-signer');
 
+exports.AuthCompleteResult = AuthCompleteResult;
+exports.AuthStartResult = AuthStartResult;
+exports.Authentication = Authentication;
 exports.BaseSigner = BaseSigner;
 exports.CadesSignature = CadesSignature;
 exports.CadesTimestamp = CadesTimestamp;
