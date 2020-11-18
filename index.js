@@ -91,7 +91,7 @@ const {
 	Pkcs12GenerationResult
 } = require('./lib/pkcs12-generator');
 const { PkiExpressConfig } = require('./lib/pkiexpress-config');
-const { PkiExpressOperator } = require('./lib/pkiexpress-operador');
+const { PkiExpressOperator } = require('./lib/pkiexpress-operator');
 const { ResourceContentOrReference } = require('./lib/resource-content-or-reference');
 const { SignatureAlgorithmAndValue } = require('./lib/signature-algorithm-and-value');
 const { SignatureExplorer } = require('./lib/signature-explorer');
