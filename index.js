@@ -28,7 +28,8 @@ const { DiscoverServicesResult } = require('./lib/discover-services-result');
 const { ErrorCodes } = require('./lib/error-codes');
 const { 
 	KeyFormats,
-	PadesCertificationLevels
+	PadesCertificationLevels,
+	XmlElementInsertions
 } = require('./lib/enums');
 const { InstallationNotFoundError } = require('./lib/installation-not-found-error');
 const {
@@ -83,6 +84,12 @@ const {
 	PKCertificate,
 	PkiBrazilCertificateFields,
 	PkiItalyCertificateFields,
+	PkiArgentinaCertificateFields,
+	PkiEcuadorCertificateFields,
+	PkiParaguayCertificateFields,
+	PkiPeruCertificateFields,
+	CertificatePolicy,
+	CertificatePolicyQualifier,
 	Name
 } = require('./lib/pk-certificate');
 const { Pkcs12Certificate } = require('./lib/pkcs12-certificate');
@@ -141,6 +148,7 @@ exports.DiscoverServicesResult = DiscoverServicesResult;
 exports.ErrorCodes = ErrorCodes;
 exports.KeyFormats = KeyFormats;
 exports.PadesCertificationLevels = PadesCertificationLevels;
+exports.XmlElementInsertions = XmlElementInsertions;
 exports.InstallationNotFoundError = InstallationNotFoundError;
 exports.KeyGenerator = KeyGenerator;
 exports.KeyGenerationResult = KeyGenerationResult;
@@ -187,6 +195,12 @@ exports.PKCertificate = PKCertificate;
 exports.Pkcs12Certificate = Pkcs12Certificate;
 exports.PkiBrazilCertificateFields = PkiBrazilCertificateFields;
 exports.PkiItalyCertificateFields = PkiItalyCertificateFields;
+exports.PkiArgentinaCertificateFields = PkiArgentinaCertificateFields;
+exports.PkiEcuadorCertificateFields = PkiEcuadorCertificateFields;
+exports.PkiParaguayCertificateFields = PkiParaguayCertificateFields;
+exports.PkiPeruCertificateFields = PkiPeruCertificateFields;
+exports.CertificatePolicy = CertificatePolicy;
+exports.CertificatePolicyQualifier = CertificatePolicyQualifier;
 exports.Name = Name;
 exports.Pkcs12Generator = Pkcs12Generator;
 exports.Pkcs12GenerationResult = Pkcs12GenerationResult;
