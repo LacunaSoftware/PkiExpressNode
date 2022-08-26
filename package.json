@@ -20,5 +20,8 @@
     "tmp": "^0.0.33"
   },
   "repository": "https://github.com/LacunaSoftware/PkiExpressNode",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-prettier": "^8.5.0"
+  }
 }

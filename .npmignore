@@ -10,3 +10,9 @@ node_modules/
 npm-debug.log
 
 .eslintrc.json
+
+# Tests
+test/
+jest.config.integration.json
+jest.config.unit.json
+jest.config.json

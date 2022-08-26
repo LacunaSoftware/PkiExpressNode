@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"jest.coverageFormatter": "GutterFormatter",
+		"jest.debugCodeLens.showWhenTestStateIn": ["pass", "fail", "unknown"],
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.formatOnSave": true
+	},
+	"extensions": {
+		"recommendations": [
+			"christian-kohler.npm-intellisense",
+			"dbaeumer.vscode-eslint",
+			"Orta.vscode-jest",
+			"esbenp.prettier-vscode"
+		]
+	}
+}
