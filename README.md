@@ -10,12 +10,11 @@ Or informing on your project's `package.json` file:
 
 ```json
 {
-  "dependencies": {
-    "pki-express": "1.11.0"
-  }
+	"dependencies": {
+		"pki-express": "1.12.0"
+	}
 }
 ```
-    
 
 ## Documentation
 
