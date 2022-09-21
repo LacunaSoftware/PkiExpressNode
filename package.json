@@ -2,7 +2,7 @@
 	"name": "pki-express",
 	"version": "1.12.0",
 	"description": "Classes to consume PKI Express",
-	"main": "src/index.js",
+	"main": "./dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
