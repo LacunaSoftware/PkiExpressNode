@@ -1,19 +1,23 @@
-'use strict';
-const { AuthCompleteResult } = require('./lib/auth-complete-result');
-const { AuthStartResult } = require('./lib/auth-start-result');
-const { Authentication } = require('./lib/authentication');
-const { BaseSigner } = require('./lib/base-signer');
+"use strict";
+const { AuthCompleteResult } = require("./lib/auth-complete-result");
+const { AuthStartResult } = require("./lib/auth-start-result");
+const { Authentication } = require("./lib/authentication");
+const { BaseSigner } = require("./lib/base-signer");
 const {
 	CadesSignature,
 	CadesTimestamp,
-	CadesSignerInfo
-} = require('./lib/cades-signature');
-const { CadesSignatureEditor } = require('./lib/cades-signature-editor');
-const { CadesSignatureExplorer } = require('./lib/cades-signature-explorer');
-const { CadesSignatureStarter } = require('./lib/cades-signature-starter');
-const { CadesSigner } = require('./lib/cades-signer');
-const { CheckServiceResult } = require('./lib/check-service-result');
-const { Color } = require('./lib/color');
+	CadesSignerInfo,
+} = require("./lib/cades-signature");
+const { CadesSignatureEditor } = require("./lib/cades-signature-editor");
+const { CadesSignatureExplorer } = require("./lib/cades-signature-explorer");
+const { CadesSignatureStarter } = require("./lib/cades-signature-starter");
+const { CadesSigner } = require("./lib/cades-signer");
+const { CertificateExplorer } = require("./lib/certificate-explorer");
+const {
+	CertificateExplorerResult,
+} = require("./lib/certificate-explorer-result");
+const { CheckServiceResult } = require("./lib/check-service-result");
+const { Color } = require("./lib/color");
 const {
 	DigestAlgorithms,
 	DigestAlgorithm,
@@ -21,30 +25,29 @@ const {
 	SHA1DigestAlgorithm,
 	SHA256DigestAlgorithm,
 	SHA384DigestAlgorithm,
-	SHA512DigestAlgorithm
-} = require('./lib/digest-algorithm');
-const { DigestAlgorithmAndValue } = require('./lib/digest-algorithm-and-value');
-const { DiscoverServicesResult } = require('./lib/discover-services-result');
-const { ErrorCodes } = require('./lib/error-codes');
-const { 
+	SHA512DigestAlgorithm,
+} = require("./lib/digest-algorithm");
+const { DigestAlgorithmAndValue } = require("./lib/digest-algorithm-and-value");
+const { DiscoverServicesResult } = require("./lib/discover-services-result");
+const { ErrorCodes } = require("./lib/error-codes");
+const {
 	KeyFormats,
 	PadesCertificationLevels,
-	XmlElementInsertions
-} = require('./lib/enums');
-const { InstallationNotFoundError } = require('./lib/installation-not-found-error');
+	XmlElementInsertions,
+} = require("./lib/enums");
 const {
-	KeyGenerator,
-	KeyGenerationResult
-} = require('./lib/key-generator');
-const { Oids } = require('./lib/oids');
-const { PadesHorizontalAlign } = require('./lib/pades-horizontal-align');
-const { PadesMeasurementUnits } = require('./lib/pades-measurement-units');
-const { PadesSignature } = require('./lib/pades-signature');
-const { PadesSignatureExplorer } = require('./lib/pades-signature-explorer');
-const { PadesSignatureStarter } = require('./lib/pades-signature-starter');
-const { PadesSigner } = require('./lib/pades-signer');
-const { PadesVerticalAlign } = require('./lib/pades-vertical-align');
-const { PadesVisualRectangle } = require('./lib/pades-visual-rectangle');
+	InstallationNotFoundError,
+} = require("./lib/installation-not-found-error");
+const { KeyGenerator, KeyGenerationResult } = require("./lib/key-generator");
+const { Oids } = require("./lib/oids");
+const { PadesHorizontalAlign } = require("./lib/pades-horizontal-align");
+const { PadesMeasurementUnits } = require("./lib/pades-measurement-units");
+const { PadesSignature } = require("./lib/pades-signature");
+const { PadesSignatureExplorer } = require("./lib/pades-signature-explorer");
+const { PadesSignatureStarter } = require("./lib/pades-signature-starter");
+const { PadesSigner } = require("./lib/pades-signer");
+const { PadesVerticalAlign } = require("./lib/pades-vertical-align");
+const { PadesVisualRectangle } = require("./lib/pades-visual-rectangle");
 const {
 	Initial,
 	FixedWidth,
@@ -57,29 +60,29 @@ const {
 	WidthDefinedVarHeight,
 	HeightDefinedFixedWidth,
 	HeightDefinedVarWidth,
-	VarWidthAndHeight
-} = require('./lib/pdf-container-definition');
-const { PadesTimestamper } = require('./lib/pades-timestamper');
-const { PdfHelper } = require('./lib/pdf-helper');
-const { PdfMark } = require('./lib/pdf-mark');
-const { PdfMarkElement } = require('./lib/pdf-mark-element');
-const { PdfMarkElementType } = require('./lib/pdf-mark-element-type');
-const { PdfMarkImage } = require('./lib/pdf-mark-image');
-const { PdfMarkImageElement } = require('./lib/pdf-mark-image-element');
-const { PdfMarkPageOptions } = require('./lib/pdf-mark-page-options');
-const { PdfMarkQRCodeElement } = require('./lib/pdf-mark-qr-code-element');
-const { PdfMarkTextElement } = require('./lib/pdf-mark-text-element');
-const { PdfMarker } = require('./lib/pdf-marker');
-const { PdfTextSection } = require('./lib/pdf-text-section');
-const { PdfTextStyle } = require('./lib/pdf-text-style');
+	VarWidthAndHeight,
+} = require("./lib/pdf-container-definition");
+const { PadesTimestamper } = require("./lib/pades-timestamper");
+const { PdfHelper } = require("./lib/pdf-helper");
+const { PdfMark } = require("./lib/pdf-mark");
+const { PdfMarkElement } = require("./lib/pdf-mark-element");
+const { PdfMarkElementType } = require("./lib/pdf-mark-element-type");
+const { PdfMarkImage } = require("./lib/pdf-mark-image");
+const { PdfMarkImageElement } = require("./lib/pdf-mark-image-element");
+const { PdfMarkPageOptions } = require("./lib/pdf-mark-page-options");
+const { PdfMarkQRCodeElement } = require("./lib/pdf-mark-qr-code-element");
+const { PdfMarkTextElement } = require("./lib/pdf-mark-text-element");
+const { PdfMarker } = require("./lib/pdf-marker");
+const { PdfTextSection } = require("./lib/pdf-text-section");
+const { PdfTextStyle } = require("./lib/pdf-text-style");
 const {
 	PKAlgorithms,
 	SignatureAlgorithms,
 	SignatureAlgorithm,
 	RSASignatureAlgorithm,
 	RSAPKAlgorithm,
-	PKAlgorithm
-} = require('./lib/pk-algorithms');
+	PKAlgorithm,
+} = require("./lib/pk-algorithms");
 const {
 	PKCertificate,
 	PkiBrazilCertificateFields,
@@ -90,38 +93,51 @@ const {
 	PkiPeruCertificateFields,
 	CertificatePolicy,
 	CertificatePolicyQualifier,
-	Name
-} = require('./lib/pk-certificate');
-const { Pkcs12Certificate } = require('./lib/pkcs12-certificate');
+	Name,
+} = require("./lib/pk-certificate");
+const { Pkcs12Certificate } = require("./lib/pkcs12-certificate");
 const {
 	Pkcs12Generator,
-	Pkcs12GenerationResult
-} = require('./lib/pkcs12-generator');
-const { PkiExpressConfig } = require('./lib/pkiexpress-config');
-const { PkiExpressOperator } = require('./lib/pkiexpress-operator');
-const { ResourceContentOrReference } = require('./lib/resource-content-or-reference');
-const { SignatureAlgorithmAndValue } = require('./lib/signature-algorithm-and-value');
-const { SignatureExplorer } = require('./lib/signature-explorer');
-const { SignatureFinisher } = require('./lib/signature-finisher');
-const { SignaturePolicyIdentifier } = require('./lib/signature-policy-identifier');
-const { SignatureStarter } = require('./lib/signature-starter');
-const { Signer } = require('./lib/signer');
-const { StandardSignaturePolicies } = require('./lib/standard-signature-policies');
-const { TimestampAuthority } = require('./lib/timestamp-authority');
-const { TimestampAuthorityAuthType } = require('./lib/timestamp-authority-auth-type');
-const { TrustServiceAuthParameters } = require('./lib/trust-service-auth-parameters');
-const { TrustServiceInfo } = require('./lib/trust-service-info');
-const { TrustServiceNameModel } = require('./lib/trust-service-name-model');
-const { TrustServiceSessionResult } = require('./lib/trust-service-session-result');
-const { TrustServiceSessionTypes } = require('./lib/trust-service-session-types');
-const { TrustServicesManager } = require('./lib/trust-services-manager');
-const { ValidationError } = require('./lib/validation-error');
+	Pkcs12GenerationResult,
+} = require("./lib/pkcs12-generator");
+const { PkiExpressConfig } = require("./lib/pkiexpress-config");
+const { PkiExpressOperator } = require("./lib/pkiexpress-operator");
 const {
-	ValidationResults,
-	ValidationItem
-} = require('./lib/validation');
-const { XmlSignatureStarter } = require('./lib/xml-signature-starter');
-const { XmlSigner } = require('./lib/xml-signer');
+	ResourceContentOrReference,
+} = require("./lib/resource-content-or-reference");
+const {
+	SignatureAlgorithmAndValue,
+} = require("./lib/signature-algorithm-and-value");
+const { SignatureExplorer } = require("./lib/signature-explorer");
+const { SignatureFinisher } = require("./lib/signature-finisher");
+const {
+	SignaturePolicyIdentifier,
+} = require("./lib/signature-policy-identifier");
+const { SignatureStarter } = require("./lib/signature-starter");
+const { Signer } = require("./lib/signer");
+const {
+	StandardSignaturePolicies,
+} = require("./lib/standard-signature-policies");
+const { TimestampAuthority } = require("./lib/timestamp-authority");
+const {
+	TimestampAuthorityAuthType,
+} = require("./lib/timestamp-authority-auth-type");
+const {
+	TrustServiceAuthParameters,
+} = require("./lib/trust-service-auth-parameters");
+const { TrustServiceInfo } = require("./lib/trust-service-info");
+const { TrustServiceNameModel } = require("./lib/trust-service-name-model");
+const {
+	TrustServiceSessionResult,
+} = require("./lib/trust-service-session-result");
+const {
+	TrustServiceSessionTypes,
+} = require("./lib/trust-service-session-types");
+const { TrustServicesManager } = require("./lib/trust-services-manager");
+const { ValidationError } = require("./lib/validation-error");
+const { ValidationResults, ValidationItem } = require("./lib/validation");
+const { XmlSignatureStarter } = require("./lib/xml-signature-starter");
+const { XmlSigner } = require("./lib/xml-signer");
 
 exports.AuthCompleteResult = AuthCompleteResult;
 exports.AuthStartResult = AuthStartResult;
@@ -133,6 +149,8 @@ exports.CadesSignatureEditor = CadesSignatureEditor;
 exports.CadesSignatureExplorer = CadesSignatureExplorer;
 exports.CadesSignatureStarter = CadesSignatureStarter;
 exports.CadesSigner = CadesSigner;
+exports.CertificateExplorer = CertificateExplorer;
+exports.CertificateExplorerResult = CertificateExplorerResult;
 exports.CadesSignerInfo = CadesSignerInfo;
 exports.CheckServiceResult = CheckServiceResult;
 exports.Color = Color;
@@ -186,7 +204,7 @@ exports.PdfMarker = PdfMarker;
 exports.PdfTextSection = PdfTextSection;
 exports.PdfTextStyle = PdfTextStyle;
 exports.PKAlgorithms = PKAlgorithms;
-exports.SignatureAlgorithms =SignatureAlgorithms;
+exports.SignatureAlgorithms = SignatureAlgorithms;
 exports.SignatureAlgorithm = SignatureAlgorithm;
 exports.RSASignatureAlgorithm = RSASignatureAlgorithm;
 exports.RSAPKAlgorithm = RSAPKAlgorithm;
