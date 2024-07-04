@@ -1,0 +1,31 @@
+export class Signer extends BaseSigner {
+    _outputFilePath: any;
+    _pkcs12Path: any;
+    _certThumb: any;
+    _certPassword: any;
+    _keyName: any;
+    _certFilePath: any;
+    setPkcs12FromPath(pkcs12Path: any): Promise<any>;
+    setPkcs12FromPathSync(pkcs12Path: any): void;
+    setPkcs12FromRaw(contentRaw: any): Promise<any>;
+    setPkcs12FromRawSync(contentRaw: any): void;
+    setPkcs12FromBase64(contentBase64: any): Promise<any>;
+    setPkcs12FromBase64Sync(contentBase64: any): void;
+    get pkcs12(): any;
+    set outputFile(value: any);
+    get outputFile(): any;
+    set certThumb(value: any);
+    get certThumb(): any;
+    set certPassword(value: any);
+    get certPassword(): any;
+    set keyName(value: any);
+    get keyName(): any;
+    get certFilePath(): any;
+    setCertFileFromPath(certFilePath: any): Promise<any>;
+    setCertFileFromPathSync(pkcs12Path: any): void;
+    setCertFileFromRaw(contentRaw: any): Promise<any>;
+    setCertFileFromRawSync(contentRaw: any): void;
+    setCertFileFromBase64(contentBase64: any): Promise<any>;
+    setCertFileBase64Sync(contentBase64: any): void;
+}
+import { BaseSigner } from "./base-signer";

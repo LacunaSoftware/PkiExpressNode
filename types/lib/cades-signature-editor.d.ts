@@ -1,0 +1,32 @@
+export class CadesSignatureEditor extends PkiExpressOperator {
+    _outputFilePath: any;
+    _dataFilePath: any;
+    _encapsulateContent: boolean;
+    _cmsFiles: any[];
+    get dataFilePath(): any;
+    getDataFilePath(): any;
+    setDataFileFromPath(path: any): Promise<any>;
+    setDataFileFromPathSync(path: any): void;
+    setDataFileFromRaw(contentRaw: any): Promise<any>;
+    setDataFileFromRawSync(contentRaw: any): void;
+    setDataFileFromBase64(contentBase64: any): Promise<any>;
+    setDataFileFromBase64Sync(contentBase64: any): void;
+    set outputFilePath(path: any);
+    get outputFilePath(): any;
+    getOutputFilePath(): any;
+    setOutputFilePath(path: any): void;
+    get cmsFiles(): any[];
+    getCmsFile(): any[];
+    addCmsFileFromPath(path: any): Promise<any>;
+    addCmsFileFromPathSync(path: any): void;
+    addCmsFileFromRaw(contentRaw: any): Promise<any>;
+    addCmsFileFromRawSync(contentRaw: any): void;
+    addCmsFileFromBase64(contentBase64: any): Promise<any>;
+    addCmsFileFromBase64Sync(contentBase64: any): void;
+    set encapsulateContent(value: boolean);
+    get encapsulateContent(): boolean;
+    getEncapsulateContent(): boolean;
+    setEncapsulateContent(value: any): void;
+    merge(): Promise<any>;
+}
+import { PkiExpressOperator } from "./pkiexpress-operator";
