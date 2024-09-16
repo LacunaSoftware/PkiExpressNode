@@ -1,9 +1,9 @@
 {
 	"name": "pki-express",
-	"version": "1.13.2",
+	"version": "1.13.3",
 	"description": "Classes to consume PKI Express",
 	"main": "index.js",
-	"types":"types/index.d.ts",
+	"types": "types/index.d.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
@@ -18,11 +18,14 @@
 	],
 	"author": "Ismael Medeiros by Lacuna Software",
 	"dependencies": {
+		"pki-express": "file:",
 		"tmp": "^0.0.33"
 	},
 	"repository": "https://github.com/LacunaSoftware/PkiExpressNode",
 	"license": "MIT",
 	"devDependencies": {
+		"@types/node": "^20.14.9",
+		"@types/tmp": "^0.2.6",
 		"eslint-config-prettier": "^8.5.0",
 		"typescript": "^5.5.3"
 	}
