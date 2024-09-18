@@ -1,6 +1,6 @@
 {
 	"name": "pki-express",
-	"version": "1.13.3",
+	"version": "1.14.0",
 	"description": "Classes to consume PKI Express",
 	"main": "index.js",
 	"types": "types/index.d.ts",
@@ -24,7 +24,7 @@
 	"repository": "https://github.com/LacunaSoftware/PkiExpressNode",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "^20.14.9",
+		"@types/node": "^20.16.5",
 		"@types/tmp": "^0.2.6",
 		"eslint-config-prettier": "^8.5.0",
 		"typescript": "^5.5.3"
