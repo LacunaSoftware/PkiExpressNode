@@ -11,7 +11,7 @@ Or informing on your project's `package.json` file:
 ```json
 {
 	"dependencies": {
-		"pki-express": "1.14.0"
+		"pki-express": "1.14.2"
 	}
 }
 ```
