@@ -1,6 +1,8 @@
 export namespace Command {
     let SIGN_CADES: string;
     let SIGN_PADES: string;
+    let SIGN_HASH: string;
+    let SIGN_DATA: string;
     let SIGN_XML: string;
     let START_CADES: string;
     let START_PADES: string;

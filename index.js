@@ -3,6 +3,8 @@ const { AuthCompleteResult } = require("./lib/auth-complete-result");
 const { AuthStartResult } = require("./lib/auth-start-result");
 const { Authentication } = require("./lib/authentication");
 const { BaseSigner } = require("./lib/base-signer");
+const { SignData } = require("./lib/sign-data");
+const { SignHash } = require("./lib/sign-hash");
 const {
 	CadesSignature,
 	CadesTimestamp,
@@ -231,6 +233,8 @@ exports.SignatureExplorer = SignatureExplorer;
 exports.SignaturePolicyIdentifier = SignaturePolicyIdentifier;
 exports.SignatureFinisher = SignatureFinisher;
 exports.SignatureStarter = SignatureStarter;
+exports.SignData = SignData;
+exports.SignHash = SignHash;
 exports.Signer = Signer;
 exports.StandardSignaturePolicies = StandardSignaturePolicies;
 exports.TimestampAuthority = TimestampAuthority;
