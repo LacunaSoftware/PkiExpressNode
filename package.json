@@ -1,6 +1,6 @@
 {
 	"name": "pki-express",
-	"version": "1.14.0",
+	"version": "1.14.2",
 	"description": "Classes to consume PKI Express",
 	"main": "index.js",
 	"types": "types/index.d.ts",
@@ -18,7 +18,6 @@
 	],
 	"author": "Ismael Medeiros by Lacuna Software",
 	"dependencies": {
-		"pki-express": "file:",
 		"tmp": "^0.0.33"
 	},
 	"repository": "https://github.com/LacunaSoftware/PkiExpressNode",
