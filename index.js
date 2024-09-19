@@ -140,6 +140,7 @@ const { ValidationError } = require("./lib/validation-error");
 const { ValidationResults, ValidationItem } = require("./lib/validation");
 const { XmlSignatureStarter } = require("./lib/xml-signature-starter");
 const { XmlSigner } = require("./lib/xml-signer");
+const { CertificateStoreOptions } = require("./lib/certificate-store-options");
 
 exports.AuthCompleteResult = AuthCompleteResult;
 exports.AuthStartResult = AuthStartResult;
@@ -153,6 +154,7 @@ exports.CadesSignatureStarter = CadesSignatureStarter;
 exports.CadesSigner = CadesSigner;
 exports.CertificateExplorer = CertificateExplorer;
 exports.CertificateExplorerResult = CertificateExplorerResult;
+exports.CertificateStoreOptions = CertificateStoreOptions;
 exports.CadesSignerInfo = CadesSignerInfo;
 exports.CheckServiceResult = CheckServiceResult;
 exports.Color = Color;
