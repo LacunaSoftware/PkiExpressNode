@@ -1,6 +1,6 @@
 {
 	"name": "pki-express",
-	"version": "1.14.2",
+	"version": "1.15.0",
 	"description": "Classes to consume PKI Express",
 	"main": "index.js",
 	"types": "types/index.d.ts",
