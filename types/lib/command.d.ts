@@ -19,6 +19,7 @@ export namespace Command {
     let SIGN_HASH: string;
     let SIGN_PADES: string;
     let SIGN_XML: string;
+    let STAMP_DATA: string;
     let STAMP_HASH: string;
     let STAMP_PDF: string;
     let START_AUTH: string;

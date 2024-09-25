@@ -142,6 +142,7 @@ const { XmlSignatureStarter } = require("./lib/xml-signature-starter");
 const { XmlSigner } = require("./lib/xml-signer");
 const { CertificateStoreOptions } = require("./lib/certificate-store-options");
 const { StampHash } = require("./lib/stamp-hash");
+const { StampData } = require("./lib/stamp-data");
 
 exports.AuthCompleteResult = AuthCompleteResult;
 exports.Authentication = Authentication;
@@ -232,7 +233,8 @@ exports.SignatureStarter = SignatureStarter;
 exports.SignData = SignData;
 exports.Signer = Signer;
 exports.SignHash = SignHash;
-exports.StampHash = StampHash
+exports.StampData = StampData;
+exports.StampHash = StampHash;
 exports.StandardSignaturePolicies = StandardSignaturePolicies;
 exports.TimestampAuthority = TimestampAuthority;
 exports.TimestampAuthorityAuthType = TimestampAuthorityAuthType;
