@@ -1,6 +1,6 @@
 export class PkiExpressOperator {
     static _getTransferFileName(): Promise<any>;
-    static _getTransferFileNameSync(): any;
+    static _getTransferFileNameSync(): string;
     static _parseOutput(dataBase64: any): any;
     constructor(config: any);
     _tempFiles: any[];
@@ -17,9 +17,9 @@ export class PkiExpressOperator {
     disposeSync(): Promise<any>;
     _invokePlain(command: any, args: any): Promise<any>;
     _invoke(command: any, args: any, plainOutput: any): Promise<any>;
-    _getPkiExpressInvocationSync(): any[];
+    _getPkiExpressInvocationSync(): string[];
     _createTempFile(): Promise<any>;
-    _createTempFileSync(): any;
+    _createTempFileSync(): string;
     addFileReference(alias: any, referencePath: any): Promise<any>;
     addFileReferenceSync(alias: any, referencePath: any): void;
     addTrustedRoot(rootPath: any): Promise<any>;
