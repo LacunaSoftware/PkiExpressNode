@@ -8,6 +8,7 @@ export namespace Command {
     let EDIT_PDF: string;
     let GEN_KEY: string;
     let GET_SERVICE_AUTH_CUSTOM_STATE: string;
+    let LIST_TIMEZONES: string;
     let MERGE_CMS: string;
     let OPEN_CADES: string;
     let OPEN_CERT: string;

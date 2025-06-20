@@ -36,6 +36,7 @@ const {
 	KeyFormats,
 	PadesCertificationLevels,
 	XmlElementInsertions,
+	TimeZones,
 } = require("./lib/enums");
 const {
 	InstallationNotFoundError,
@@ -143,6 +144,7 @@ const { XmlSigner } = require("./lib/xml-signer");
 const { CertificateStoreOptions } = require("./lib/certificate-store-options");
 const { StampHash } = require("./lib/stamp-hash");
 const { StampData } = require("./lib/stamp-data");
+const { ListTimezones } = require("./lib/list-timezones");
 
 exports.AuthCompleteResult = AuthCompleteResult;
 exports.Authentication = Authentication;
@@ -236,6 +238,7 @@ exports.SignHash = SignHash;
 exports.StampData = StampData;
 exports.StampHash = StampHash;
 exports.StandardSignaturePolicies = StandardSignaturePolicies;
+exports.TimeZones = TimeZones;
 exports.TimestampAuthority = TimestampAuthority;
 exports.TimestampAuthorityAuthType = TimestampAuthorityAuthType;
 exports.TrustServiceAuthParameters = TrustServiceAuthParameters;
@@ -256,3 +259,4 @@ exports.WidthDefinedVarHeight = WidthDefinedVarHeight;
 exports.XmlElementInsertions = XmlElementInsertions;
 exports.XmlSignatureStarter = XmlSignatureStarter;
 exports.XmlSigner = XmlSigner;
+exports.ListTimezones = ListTimezones;
