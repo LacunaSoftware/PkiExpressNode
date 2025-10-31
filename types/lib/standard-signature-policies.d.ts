@@ -22,5 +22,6 @@ export namespace StandardSignaturePolicies {
     let PKI_BRAZIL_XML_ADR_ARQUIVAMENTO: string;
     let COD_WITH_SHA1: string;
     let COD_WITH_SHA256: string;
+    let COD_WITH_SHA256_EC14N: string;
 }
 export function _requireTimestamp(policy: any): boolean;
