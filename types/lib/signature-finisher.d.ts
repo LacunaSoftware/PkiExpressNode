@@ -1,0 +1,31 @@
+export class SignatureFinisher extends PkiExpressOperator {
+    _fileToSignPath: any;
+    _transferFilePath: any;
+    _dataFilePath: any;
+    _outputFilePath: any;
+    _signature: any;
+    setFileToSignFromPath(filePath: any): Promise<any>;
+    setFileToSignFromPathSync(filePath: any): void;
+    setFileToSignFromRaw(contentRaw: any): Promise<any>;
+    setFileToSignFromRawSync(contentRaw: any): void;
+    setFileToSignFromBase64(contentBase64: any): Promise<any>;
+    setFileToSignFromBase64Sync(contentBase64: any): void;
+    setTransferFileFromPath(file: any): Promise<any>;
+    setTransferFileFromPathSync(file: any): void;
+    setTransferFileFromRaw(contentRaw: any): Promise<any>;
+    setTransferFileFromRawSync(contentRaw: any): void;
+    setTransferFileFromBase64(contentBase64: any): Promise<any>;
+    setTransferFileFromBase64Sync(contentBase64: any): void;
+    setDataFileFromPath(dataFilePath: any): Promise<any>;
+    setDataFileFromPathSync(dataFilePath: any): void;
+    setDataFileFromRaw(contentRaw: any): Promise<any>;
+    setDataFileFromRawSync(contentRaw: any): void;
+    setDataFileFromBase64(contentBase64: any): Promise<any>;
+    setDataFileFromBase64Sync(contentBase64: any): void;
+    set signature(value: any);
+    get signature(): any;
+    set outputFile(value: any);
+    get outputFile(): any;
+    complete(getCert?: boolean): Promise<any>;
+}
+import { PkiExpressOperator } from "./pkiexpress-operator";
